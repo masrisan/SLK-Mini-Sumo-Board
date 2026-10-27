@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="masrisanTekNo — robotics, electronics and the SLK Mini Sumo Board. Product information, wiring, firmware and setup downloads.">
+<title>masrisanTekNo | SLK Mini Sumo Board</title>
+<style>
+:root{--bg:#0a100d;--panel:#111a14;--panel2:#17231a;--text:#f0f5ef;--muted:#a5b3a7;--line:#2b3a2e;--lime:#b9f45a;--lime2:#8fd43c;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:inherit}img{max-width:100%}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0a100df0;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:22px;font-weight:850;letter-spacing:-.8px;text-decoration:none}.brand span{color:var(--lime)}nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:650}nav a:hover,nav a:focus{color:var(--lime)}.menu{display:none;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px}
+.hero{padding:76px 0 68px;background:radial-gradient(ellipse at 80% 10%,#21351d 0,transparent 44%),linear-gradient(180deg,#0b130d,#0a100d)}.hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:54px;align-items:center}.eyebrow{color:var(--lime);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(40px,5vw,66px);line-height:1.02;letter-spacing:-2.5px;margin:16px 0}.hero p{color:var(--muted);font-size:18px;max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid var(--line)}.btn.primary{background:var(--lime);color:#17210f;border-color:var(--lime)}.btn.secondary{background:#111a14;color:var(--text)}.hero-photo{display:block;width:100%;max-height:460px;object-fit:contain;background:#f4f4f2;border-radius:18px;border:1px solid #364537;box-shadow:0 24px 70px #0008}.caption{color:#829083;font-size:12px;margin-top:10px}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.chip{border:1px solid #344536;border-radius:999px;padding:6px 11px;color:#d9e7d5;font-size:12px;font-weight:750}
+.section{padding:76px 0;border-top:1px solid #1c291f}.section-head{max-width:720px;margin-bottom:30px}.section h2{font-size:clamp(29px,3vw,42px);letter-spacing:-1.3px;line-height:1.12;margin:9px 0 12px}.section-head p,.muted{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:22px}.icon{width:43px;height:43px;display:grid;place-items:center;background:#24341d;color:var(--lime);border-radius:12px;font-size:22px}.card h3{margin:15px 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px}.photo-card{margin:0;border:1px solid var(--line);background:var(--panel);border-radius:14px;overflow:hidden}.photo-card img{width:100%;height:250px;object-fit:cover;display:block;background:#f1f1ef}.photo-card:first-child img{object-fit:contain}.photo-card figcaption{padding:14px 16px;color:var(--muted);font-size:13px}.photo-card strong{display:block;color:var(--text);font-size:15px}
+.specs{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.specs th,.specs td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}.specs th{width:34%;color:#c8d8c4;font-size:14px}.specs td{color:var(--muted)}.spec-note{font-size:12px;color:#a7b4a6;margin-top:12px}
+.wiring{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.wiring img{width:100%;background:#fff;border-radius:12px;border:1px solid var(--line)}.download-list{display:grid;gap:13px}.download-item{display:flex;align-items:flex-start;gap:15px;padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.file-icon{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:#24341d;color:var(--lime);font-size:21px}.file-main{flex:1;min-width:0}.file-main h3{font-size:16px;margin:0 0 4px}.file-main p{font-size:13px;color:var(--muted);margin:0 0 8px}.filename{font-size:11px;color:#87968a;overflow-wrap:anywhere}.download-link{white-space:nowrap;display:inline-flex;align-items:center;gap:7px;color:var(--lime);font-weight:800;font-size:13px;text-decoration:none;padding:8px 10px;border:1px solid #435b35;border-radius:8px}.download-link:hover{background:#22331c}.tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--lime);font-weight:800;margin-bottom:4px}.manual-box{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#18251a,#111a14);border:1px solid var(--line);border-radius:15px;padding:24px;margin-bottom:18px}.manual-box .icon{flex-shrink:0}.manual-box h3{margin:0 0 4px}.manual-box p{margin:0;color:var(--muted);font-size:14px}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.note{border-left:3px solid var(--lime);padding:12px 15px;background:#121c13;color:var(--muted);font-size:13px;border-radius:0 8px 8px 0;margin-top:18px}
+@media(max-width:850px){.hero-grid,.wiring{grid-template-columns:1fr}.hero{padding-top:48px}.hero-grid{gap:28px}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.photo-card:first-child{grid-column:1/-1}nav{gap:12px}}
+@media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{min-height:65px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:65px;background:#0b120df7;padding:16px 22px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero h1{letter-spacing:-1.5px}.cards,.gallery{grid-template-columns:1fr}.photo-card:first-child{grid-column:auto}.photo-card img{height:auto;max-height:380px}.download-item{flex-wrap:wrap}.download-link{margin-left:57px}.manual-box{align-items:flex-start}.specs th,.specs td{padding:11px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">masrisan<span>TekNo</span></a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#product">SLK Mini Sumo Board</a><a href="#downloads">Downloads</a><a href="#wiring">Wiring & Setup</a><a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Robotics · Electronics · Technology</div>
+      <h1>Build small.<br><span style="color:var(--lime)">Drive boldly.</span></h1>
+      <p>Meet the SLK Mini Sumo Board — a compact motor-control platform for mini sumo robots, embedded projects and hands-on robotics learning.</p>
+      <div class="actions"><a class="btn primary" href="#product">Explore the board <span aria-hidden="true">→</span></a><a class="btn secondary" href="#downloads">Browse downloads ↓</a></div>
+      <div class="chips"><span class="chip">ESP32-S3 Zero</span><span class="chip">DRV8701 gate driver</span><span class="chip">RC & Bluetooth firmware</span></div>
+    </div>
+    <div>
+      <img class="hero-photo" src="assets/slk-board-isometric.png" alt="SLK Mini Sumo Board with red PCB, green terminal block and Waveshare ESP32-S3 Zero controller">
+      <p class="caption">SLK Mini Sumo Board · Product photograph</p>
+    </div>
+  </div>
+</section>
+<section class="section" id="product">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Featured product</div><h2>SLK Mini Sumo Board</h2><p>A compact board designed to bring motor control and embedded programming together in one mini sumo robotics platform.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">⌘</div><h3>ESP32-S3 control</h3><p>Uses the Waveshare ESP32-S3 Zero as the controller for your robot firmware and control input.</p></article>
+      <article class="card"><div class="icon">⚡</div><h3>Motor power stage</h3><p>DRV8701 gate driver with external MOSFETs for driving the left and right DC motors.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3>Multiple control options</h3><p>Firmware options for RC receiver, Bluetooth mobile control and the TX X3 Bluetooth joystick.</p></article>
+    </div>
+    <div style="height:26px"></div>
+    <div class="gallery">
+      <figure class="photo-card"><img src="assets/slk-board-top-annotated.png" alt="Annotated top view identifying terminal block, MOSFET power stage, DRV8701 gate driver, RC input and ESP32-S3 Zero"><figcaption><strong>Component overview</strong>Annotated board layout.</figcaption></figure>
+      <figure class="photo-card"><img src="assets/slk-board-isometric.png" alt="Isometric view of the SLK Mini Sumo Board"><figcaption><strong>Isometric view</strong>Compact 30 × 60 mm board.</figcaption></figure>
+      <figure class="photo-card"><img src="assets/slk-board-front.jpg" alt="Front view of assembled SLK Mini Sumo Board"><figcaption><strong>Assembled board</strong>Red PCB and controller module.</figcaption></figure>
+    </div>
+    <h3 style="margin-top:34px">Technical specifications</h3>
+    <table class="specs">
+      <tbody>
+        <tr><th>Product</th><td>SLK Mini Sumo Board</td></tr>
+        <tr><th>Controller</th><td>Waveshare ESP32-S3 Zero</td></tr>
+        <tr><th>Gate driver</th><td>DRV8701</td></tr>
+        <tr><th>Power stage</th><td>External MOSFETs</td></tr>
+        <tr><th>Control inputs</th><td>RC receiver and Bluetooth firmware options</td></tr>
+        <tr><th>Board dimensions</th><td>30 × 60 mm</td></tr>
+      </tbody>
+    </table>
+    <p class="spec-note">Continuous current, peak current and battery operating limits are not published here because the final rated values have not been confirmed for this website.</p>
+  </div>
+</section>
+<section class="section" id="downloads">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Files & resources</div><h2>Downloads</h2><p>Choose the firmware or guide for your SLK Mini Sumo Board setup. Firmware files are supplied as Arduino IDE sketches.</p></div>
+    <h3>Firmware</h3>
+    <div class="download-list">
+      <article class="download-item"><div class="file-icon">↗</div><div class="file-main"><span class="tag">RC receiver</span><h3>RC Remote Control Firmware</h3><p>Firmware intended for control using an RC transmitter and receiver. Filename indicates a 5 kHz PWM version.</p><div class="filename">WAVESHARE_ESP32S3ZERO_PWM_DIR_V4_PWM5Khz_OK.ino</div></div><a class="download-link" href="downloads/WAVESHARE_ESP32S3ZERO_PWM_DIR_V4_PWM5Khz_OK.ino" download>Download ↓</a></article>
+      <article class="download-item"><div class="file-icon">ᛒ</div><div class="file-main"><span class="tag">Bluetooth · Analog</span><h3>Mobile Phone — Analog Control</h3><p>Bluetooth firmware for mobile-phone control using analog-style inputs.</p><div class="filename">WAVESHARE_ESP32S3ZERO_PWM_DIR_V1_BLE_LIBV3_ANALOG_OK.ino</div></div><a class="download-link" href="downloads/WAVESHARE_ESP32S3ZERO_PWM_DIR_V1_BLE_LIBV3_ANALOG_OK.ino" download>Download ↓</a></article>
+      <article class="download-item"><div class="file-icon">ᛒ</div><div class="file-main"><span class="tag">Bluetooth · Digital</span><h3>Mobile Phone — Digital Control</h3><p>Bluetooth firmware for mobile-phone control using digital buttons.</p><div class="filename">WAVESHARE_ESP32S3ZERO_PWM_DIR_V1_BLE_LIBV3_DIGITAL_OK.ino</div></div><a class="download-link" href="downloads/WAVESHARE_ESP32S3ZERO_PWM_DIR_V1_BLE_LIBV3_DIGITAL_OK.ino" download>Download ↓</a></article>
+      <article class="download-item"><div class="file-icon">🎮</div><div class="file-main"><span class="tag">Bluetooth · TX X3 joystick</span><h3>TX X3 Bluetooth Joystick Firmware</h3><p>Firmware for controlling the robot with the TX X3 joystick over Bluetooth.</p><div class="filename">TX_X3_1_SEPTEMBER.ino</div></div><a class="download-link" href="downloads/TX_X3_1_SEPTEMBER.ino" download>Download ↓</a></article>
+      <article class="download-item"><div class="file-icon">⌕</div><div class="file-main"><span class="tag">Setup utility</span><h3>TX X3 — Get MAC Address</h3><p>Optional utility file associated with setting up the TX X3 joystick. Confirm its use before following it as a procedure.</p><div class="filename">TX_X3_GET_MAC_ADDRESS.ino</div></div><a class="download-link" href="downloads/TX_X3_GET_MAC_ADDRESS.ino" download>Download ↓</a></article>
+    </div>
+    <h3 style="margin-top:38px">Guide & documentation</h3>
+    <div class="download-list">
+      <article class="download-item"><div class="file-icon">PDF</div><div class="file-main"><span class="tag">Setup guide · Bahasa Melayu</span><h3>Panduan Asas Tuning Board SLK</h3><p>Five-page guide covering Arduino IDE setup, ESP32 board configuration, compiling firmware and tuning robot movement.</p><div class="filename">Panduan-asas-tuning-board-SLK.pdf</div></div><a class="download-link" href="downloads/Panduan-asas-tuning-board-SLK.pdf" download>Download ↓</a></article>
+    </div>
+    <div class="note">Download note: firmware sketches are provided as source files. Open them with Arduino IDE and select the correct Waveshare ESP32-S3 Zero board and port before compiling or uploading.</div>
+  </div>
+</section>
+<section class="section" id="wiring">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Connections</div><h2>Wiring & setup</h2><p>Use the wiring diagram to identify the battery, motor and RC receiver connections before powering the board.</p></div>
+    <div class="wiring">
+      <div><h3>SLK Board wiring diagram</h3><p class="muted">The supplied diagram shows a 3S LiPo battery, left and right DC motors, and a Radiolink R6FG receiver connection.</p><a class="btn primary" href="assets/slk-board-wiring-diagram.jpg" download>Download wiring diagram ↓</a><div class="note">Check polarity, receiver pin order and the board revision before connecting the battery. The supplied diagram shows a blue PCB, while the product photographs show a red PCB; confirm the wiring layout matches your board revision.</div></div>
+      <a href="assets/slk-board-wiring-diagram.jpg" target="_blank" rel="noopener"><img src="assets/slk-board-wiring-diagram.jpg" alt="SLK Board wiring diagram showing 3S LiPo battery, two DC motors and Radiolink R6FG receiver"></a>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">About</div><h2>masrisanTekNo</h2><p>A space for robotics, electronics, hands-on development and resources related to the SLK Mini Sumo Board.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">⚙</div><h3>Build & test</h3><p>Explore the hardware and control options behind a compact mini sumo robot.</p></article>
+      <article class="card"><div class="icon">⌘</div><h3>Learn & tune</h3><p>Use firmware and setup documentation to configure your controller and tune robot movement.</p></article>
+      <article class="card"><div class="icon">↓</div><h3>Share resources</h3><p>Download the files provided for the SLK Mini Sumo Board in one place.</p></article>
+    </div>
+    <p class="spec-note">Contact information can be added when you are ready to publish it.</p>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><span>© <span id="year"></span> masrisanTekNo</span><span>Robotics · Electronics · Technology</span></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',()=>{const opened=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
